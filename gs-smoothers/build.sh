@@ -3,7 +3,8 @@
 #
 #   ./build.sh <amrex_source_dir> <tag> [test ...]
 #
-# Executables land in bin/<tag>/<test>, build logs in logs/<MACHINE>/.
+# Executables land in bin/<tag>/<test>, build logs in logs/<MACHINE>/. Only
+# Src/ and Tools/ of the AMReX tree are used; the test sources live here.
 # Tests: cell3d cell2d nodal3d nodal2d overset3d nodetensor3d pfs3d (default: all).
 # Build <tag>=base from the merge base and <tag>=pr from the PR branch, then
 # ./run.sh and ./compare.py.
@@ -37,10 +38,6 @@ status=0
 # build_one <name> <dir> <dim>
 build_one () {
     local name=$1 dir=$2 dim=$3
-    if [[ ! -d $dir ]]; then
-        echo "== $name  skipped: $dir does not exist in this tree"
-        return
-    fi
     # Separate object dirs per tag, so two source trees never share objects.
     local mk="make DIM=$dim $MAKEFLAGS_GPU AMREX_HOME=$AMREX TMP_BUILD_DIR=tmp_build_dir_$TAG"
     echo "== $name  ($dir, DIM=$dim)"
@@ -62,13 +59,18 @@ build_one () {
 
 for t in "${TESTS[@]}"; do
     case $t in
-        cell3d)       build_one cell3d       "$AMREX/Tests/LinearSolvers/ABecLaplacian_C" 3 ;;
-        cell2d)       build_one cell2d       "$AMREX/Tests/LinearSolvers/ABecLaplacian_C" 2 ;;
+        cell3d)       build_one cell3d       "$HERE/abeclap_c" 3 ;;
+        cell2d)       build_one cell2d       "$HERE/abeclap_c" 2 ;;
         nodal3d)      build_one nodal3d      "$HERE/nodal_variants" 3 ;;
         nodal2d)      build_one nodal2d      "$HERE/nodal_variants" 2 ;;
-        overset3d)    build_one overset3d    "$AMREX/Tests/LinearSolvers/CellOverset" 3 ;;
-        nodetensor3d) build_one nodetensor3d "$AMREX/Tests/LinearSolvers/NodeTensorLap" 3 ;;
-        pfs3d)        build_one pfs3d        "$AMREX/Tests/Base/ParallelForStrided" 3 ;;
+        overset3d)    build_one overset3d    "$HERE/cell_overset" 3 ;;
+        nodetensor3d) build_one nodetensor3d "$HERE/node_tensor_lap" 3 ;;
+        pfs3d)
+            if grep -q ParallelForStrided "$AMREX/Src/Base/AMReX_MFParallelFor.H" 2>/dev/null; then
+                build_one pfs3d "$HERE/parallel_for_strided" 3
+            else
+                echo "== pfs3d  skipped: this AMReX tree has no ParallelForStrided"
+            fi ;;
         *) echo "unknown test: $t"; status=1 ;;
     esac
 done

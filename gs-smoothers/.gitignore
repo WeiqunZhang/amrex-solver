@@ -1,0 +1,6 @@
+bin/
+logs/
+tmp_build_dir*/
+*.ex
+Backtrace.*
+plot*/

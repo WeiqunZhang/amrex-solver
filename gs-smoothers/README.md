@@ -34,29 +34,30 @@ sourcing `env.sh`.
 | `run.sh <tag> [case...]` | runs `cases.txt`; output in `results/<machine>/<tag>/<case>.r<N>.out` |
 | `compare.py <tagA> <tagB>` | identical/DIFFERENT per case plus iteration-time table (min over repeats) |
 | `cases.txt`, `cases/*.inputs` | case list and inputs |
+| `abeclap_c/`, `cell_overset/`, `node_tensor_lap/`, `parallel_for_strided/` | copies of the AMReX tests of the same name (ABecLaplacian_C, CellOverset, NodeTensorLap, ParallelForStrided) with a `do_plots` option |
 | `nodal_variants/` | nodal Poisson driver that selects each MLNodeLaplacian smoother kernel |
 
-Each tag builds into its own `tmp_build_dir_<tag>` so two source trees never
-share objects. Tests from the AMReX tree are built in place under
-`Tests/LinearSolvers/...` and `Tests/Base/ParallelForStrided`.
+All test sources live here; the AMReX tree is only used for `Src/` and
+`Tools/`. Each tag builds into its own `tmp_build_dir_<tag>` inside the test
+directory, so two AMReX trees never share objects.
 
 ## Kernel coverage
 
 | case(s) | executable | kernel exercised |
 |---|---|---|
-| `cell-poisson-*` | ABecLaplacian_C 3D, prob 1 | `mlpoisson_gsrb` |
-| `cell-abec-*`, `cell-abec-neumann-mb` | ABecLaplacian_C 3D, prob 2 / 3 | `abec_gsrb` |
-| `cell-poisson-jacobi-mb` | ABecLaplacian_C 3D | Jacobi, unaffected reference |
-| `cell2d-*` | ABecLaplacian_C 2D | 2D cell kernels |
-| `overset3d` | CellOverset 3D | `abec_gsrb_os` |
+| `cell-poisson-*` | abeclap_c 3D, prob 1 | `mlpoisson_gsrb` |
+| `cell-abec-*`, `cell-abec-neumann-mb` | abeclap_c 3D, prob 2 / 3 | `abec_gsrb` |
+| `cell-poisson-jacobi-mb` | abeclap_c 3D | Jacobi, unaffected reference |
+| `cell2d-*` | abeclap_c 2D | 2D cell kernels |
+| `overset3d` | cell_overset 3D | `abec_gsrb_os` |
 | `nodal-aa-*` | nodal_variants 3D | `mlndlap_gscolor_aa` |
 | `nodal-ha-mb` | nodal_variants 3D | `mlndlap_gscolor_ha` (harmonic average, coarse levels) |
 | `nodal-const-mb` | nodal_variants 3D | `mlndlap_gscolor_c` (constant sigma) |
 | `nodal-rap-mb` | nodal_variants 3D | `mlndlap_gauss_seidel_sten` (RAP coarsening) |
 | `nodal-jacobi-mb` | nodal_variants 3D | Jacobi, unaffected reference |
 | `nodal2d-aa`, `nodal2d-rz` | nodal_variants 2D | 2D nodal kernels, Cartesian and RZ |
-| `nodetensor3d` | NodeTensorLap 3D | `MLNodeTensorLaplacian` red-black smoother |
-| `pfs3d` | Tests/Base/ParallelForStrided | launcher correctness, prints `N cases, M failures`; new in the PR, so skipped for trees without it |
+| `nodetensor3d` | node_tensor_lap 3D | `MLNodeTensorLaplacian` red-black smoother |
+| `pfs3d` | parallel_for_strided | launcher correctness, prints `N cases, M failures`; skipped for AMReX trees without `ParallelForStrided` |
 
 Not covered: `mlpoisson_gsrb_os` (Poisson with overset mask) has no standalone
 test, and the 2D metric kernel `mlpoisson_gsrb_m` needs an RZ cell-centered

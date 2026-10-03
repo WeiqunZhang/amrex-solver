@@ -5,3 +5,4 @@ do_overset = 1
 verbose = 2
 bottom_verbose = 0
 multigrid_types = geometric
+do_plots = 0

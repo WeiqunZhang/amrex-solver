@@ -12,3 +12,4 @@ linop_maxorder = 2
 agglomeration = 1
 consolidation = 1
 use_gauss_seidel = 1
+do_plots = 0
