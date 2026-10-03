@@ -1,0 +1,51 @@
+Initializing AMReX (26.10-27-gcf3d426f36a3)...
+MPI initialized with 1 MPI processes
+MPI initialized with thread support level 0
+Initializing HIP...
+HIP initialized with 1 device.
+AMReX (26.10-27-gcf3d426f36a3) initialized
+
+Multigrid type: geometric
+MLMG: # of AMR levels: 2
+      # of MG levels on the coarsest AMR level: 11
+MLMG: Initial rhs               = 123.3700415
+MLMG: Initial residual (resid0) = 123.3700415
+MLMG: Iteration   1 Fine resid/bnorm = 0.05208267503
+MLMG: Iteration   2 Fine resid/bnorm = 0.001193424731
+MLMG: Iteration   3 Fine resid/bnorm = 3.197035907e-05
+MLMG: Iteration   4 Fine resid/bnorm = 1.147192459e-06
+MLMG: Iteration   5 Fine resid/bnorm = 7.51873684e-08
+MLMG: Iteration   6 Fine resid/bnorm = 6.369870359e-09
+MLMG: Iteration   7 Fine resid/bnorm = 7.006408619e-10
+MLMG: Iteration   8 Fine resid/bnorm = 1.799089915e-10
+MLMG: Iteration   9 Fine resid/bnorm = 1.285127579e-10
+MLMG: Iteration  10 Fine resid/bnorm = 1.031573855e-10
+MLMG: Iteration  11 Fine resid/bnorm = 9.518723779e-11
+MLMG: Iteration  11 Crse resid/bnorm = 5.84034125e-09
+MLMG: Iteration  12 Fine resid/bnorm = 1.040570106e-10
+MLMG: Iteration  13 Fine resid/bnorm = 1.166602847e-10
+MLMG: Iteration  14 Fine resid/bnorm = 1.110690174e-10
+MLMG: Iteration  15 Fine resid/bnorm = 1.045709833e-10
+MLMG: Iteration  16 Fine resid/bnorm = 1.34143535e-10
+MLMG: Iteration  17 Fine resid/bnorm = 1.110162609e-10
+MLMG: Iteration  18 Fine resid/bnorm = 1.025641629e-10
+MLMG: Iteration  19 Fine resid/bnorm = 1.051227955e-10
+MLMG: Iteration  20 Fine resid/bnorm = 1.036220574e-10
+MLMG: Iteration  21 Fine resid/bnorm = 1.02505647e-10
+MLMG: Iteration  22 Fine resid/bnorm = 9.925933685e-11
+MLMG: Iteration  22 Crse resid/bnorm = 2.256169687e-11
+MLMG: Final Iter. 22 resid, resid/bnorm = 1.224562851e-08, 9.925933685e-11
+MLMG: Timers: Solve = 0.332026953 Iter = 0.292943106 Bottom = 0.019875663
+Level 0 max-norm error: 1.151842783e-06 1-norm error: 3.923999632e-07 2-norm error: 5.012762841e-07
+Level 1 max-norm error: 4.432726506e-07 1-norm error: 2.869026858e-08 2-norm error: 8.329382041e-08
+Total GPU global memory (MB) spread across MPI: [65520 ... 65520]
+Free  GPU global memory (MB) spread across MPI: [16106 ... 16106]
+[The         Arena] max space (MB) allocated spread across MPI: [49140 ... 49140]
+[The         Arena] max space (MB) used      spread across MPI: [676 ... 676]
+[The Managed Arena] max space (MB) allocated spread across MPI: [8 ... 8]
+[The Managed Arena] max space (MB) used      spread across MPI: [0 ... 0]
+[The  Pinned Arena] max space (MB) allocated spread across MPI: [8 ... 8]
+[The  Pinned Arena] max space (MB) used      spread across MPI: [1 ... 1]
+[The   Comms Arena] max space (MB) allocated spread across MPI: [8 ... 8]
+[The   Comms Arena] max space (MB) used      spread across MPI: [0 ... 0]
+AMReX (26.10-27-gcf3d426f36a3) finalized

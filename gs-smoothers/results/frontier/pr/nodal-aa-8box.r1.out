@@ -1,0 +1,32 @@
+Initializing AMReX (26.10-27-gcf3d426f36a3)...
+MPI initialized with 1 MPI processes
+MPI initialized with thread support level 0
+Initializing HIP...
+HIP initialized with 1 device.
+AMReX (26.10-27-gcf3d426f36a3) initialized
+MLMG: # of AMR levels: 1
+      # of MG levels on the coarsest AMR level: 8
+MLMG: Initial rhs               = 236.6921747
+MLMG: Initial residual (resid0) = 170567.8198
+MLMG: Iteration   1 Fine resid/resid0 = 0.007780425115
+MLMG: Iteration   2 Fine resid/resid0 = 0.0001178256868
+MLMG: Iteration   3 Fine resid/resid0 = 1.860798953e-06
+MLMG: Iteration   4 Fine resid/resid0 = 3.008967948e-08
+MLMG: Iteration   5 Fine resid/resid0 = 5.197545646e-10
+MLMG: Iteration   6 Fine resid/resid0 = 9.341057414e-12
+MLMG: Final Iter. 6 resid, resid/resid0 = 1.593283798e-06, 9.341057414e-12
+MLMG: Timers: Solve = 0.181288203 Iter = 0.173879767 Bottom = 0.002035454
+Level 0
+    max-norm: 0.0003259556166
+    1-norm  : 5.7129156e-05
+Total GPU global memory (MB) spread across MPI: [65520 ... 65520]
+Free  GPU global memory (MB) spread across MPI: [16106 ... 16106]
+[The         Arena] max space (MB) allocated spread across MPI: [49140 ... 49140]
+[The         Arena] max space (MB) used      spread across MPI: [1760 ... 1760]
+[The Managed Arena] max space (MB) allocated spread across MPI: [8 ... 8]
+[The Managed Arena] max space (MB) used      spread across MPI: [0 ... 0]
+[The  Pinned Arena] max space (MB) allocated spread across MPI: [8 ... 8]
+[The  Pinned Arena] max space (MB) used      spread across MPI: [0 ... 0]
+[The   Comms Arena] max space (MB) allocated spread across MPI: [8 ... 8]
+[The   Comms Arena] max space (MB) used      spread across MPI: [0 ... 0]
+AMReX (26.10-27-gcf3d426f36a3) finalized
