@@ -19,10 +19,11 @@ public:
 
     [[nodiscard]] int getNumTrials () const { return num_trials; }
 
+    void initData ();
+
 private:
 
     void readParameters ();
-    void initData ();
 
     int max_level = 1;
     int ref_ratio = 2;
