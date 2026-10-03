@@ -39,7 +39,8 @@ while read -r name exe inputs _; do
     [[ $inputs != - ]] && inp=$HERE/cases/$inputs
     for ((r = 1; r <= REPEAT; ++r)); do
         out=$RES/$name.r$r.out
-        $LAUNCH "$bin" $inp > "$out" 2>&1
+        # stdin from /dev/null: srun would otherwise swallow the rest of cases.txt
+        $LAUNCH "$bin" $inp < /dev/null > "$out" 2>&1
         rc=$?
         summary=$(grep -o 'Iter = [0-9.e+-]*' "$out" | tr '\n' ' ')
         summary+=$(grep -o '[0-9]* cases, [0-9]* failures' "$out")
