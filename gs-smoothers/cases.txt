@@ -1,0 +1,30 @@
+# case                   executable    inputs (in cases/, "-" for none)
+#
+# Cell-centered 3D: mlpoisson_gsrb (prob 1), abec_gsrb (prob 2, 3)
+cell-poisson-mb          cell3d        cell-poisson-mb.inputs
+cell-poisson-1box        cell3d        cell-poisson-1box.inputs
+cell-poisson-8box        cell3d        cell-poisson-8box.inputs
+cell-poisson-jacobi-mb   cell3d        cell-poisson-jacobi-mb.inputs
+cell-abec-mb             cell3d        cell-abec-mb.inputs
+cell-abec-8box           cell3d        cell-abec-8box.inputs
+cell-abec-neumann-mb     cell3d        cell-abec-neumann-mb.inputs
+# Cell-centered 2D kernels
+cell2d-poisson           cell2d        cell2d-poisson.inputs
+cell2d-abec              cell2d        cell2d-abec.inputs
+# Overset mask: abec_gsrb_os
+overset3d                overset3d     overset3d.inputs
+# Nodal 3D: mlndlap_gscolor_aa / _ha / _c and mlndlap_gauss_seidel_sten (rap)
+nodal-aa-mb              nodal3d       nodal-aa-mb.inputs
+nodal-aa-1box            nodal3d       nodal-aa-1box.inputs
+nodal-aa-8box            nodal3d       nodal-aa-8box.inputs
+nodal-ha-mb              nodal3d       nodal-ha-mb.inputs
+nodal-const-mb           nodal3d       nodal-const-mb.inputs
+nodal-rap-mb             nodal3d       nodal-rap-mb.inputs
+nodal-jacobi-mb          nodal3d       nodal-jacobi-mb.inputs
+# Nodal 2D kernels, Cartesian and RZ
+nodal2d-aa               nodal2d       nodal2d-aa.inputs
+nodal2d-rz               nodal2d       nodal2d-rz.inputs
+# MLNodeTensorLaplacian
+nodetensor3d             nodetensor3d  nodetensor3d.inputs
+# ParallelForStrided / ParallelForRedBlack correctness (prints "N cases, M failures")
+pfs3d                    pfs3d         -

@@ -1,0 +1,14 @@
+max_level = 1
+ref_ratio = 2
+n_cell = 2048
+max_grid_size = 256
+composite_solve = 1
+prob_type = 1
+verbose = 2
+bottom_verbose = 0
+max_iter = 100
+max_fmg_iter = 0
+linop_maxorder = 2
+agglomeration = 1
+consolidation = 1
+use_gauss_seidel = 1

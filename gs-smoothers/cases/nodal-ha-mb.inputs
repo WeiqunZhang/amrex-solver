@@ -1,0 +1,15 @@
+max_level = 1
+ref_ratio = 2
+n_cell = 256
+max_grid_size = 64
+sigma_type = ha
+coarsening = sigma
+coord = 0
+use_gauss_seidel = 1
+verbose = 2
+bottom_verbose = 0
+max_iter = 100
+max_fmg_iter = 0
+reltol = 1.e-11
+agglomeration = 1
+consolidation = 1

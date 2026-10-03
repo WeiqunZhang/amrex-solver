@@ -1,0 +1,7 @@
+max_level = 1
+n_cell = 128
+max_grid_size = 64
+do_overset = 1
+verbose = 2
+bottom_verbose = 0
+multigrid_types = geometric
