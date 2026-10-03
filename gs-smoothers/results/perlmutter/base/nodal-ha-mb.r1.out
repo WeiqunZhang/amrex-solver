@@ -1,0 +1,39 @@
+Initializing AMReX (26.10-24-gea4f69651aa6)...
+MPI initialized with 1 MPI processes
+MPI initialized with thread support level 0
+Initializing CUDA...
+CUDA initialized with 1 device.
+AMReX (26.10-24-gea4f69651aa6) initialized
+MLMG: # of AMR levels: 2
+      # of MG levels on the coarsest AMR level: 8
+MLMG: Initial rhs               = 236.6921747
+MLMG: Initial residual (resid0) = 170567.8198
+MLMG: Iteration   1 Fine resid/resid0 = 8.09786873e-05
+MLMG: Iteration   2 Fine resid/resid0 = 2.639311588e-06
+MLMG: Iteration   3 Fine resid/resid0 = 1.198205564e-07
+MLMG: Iteration   4 Fine resid/resid0 = 6.420663766e-09
+MLMG: Iteration   5 Fine resid/resid0 = 5.123734389e-10
+MLMG: Iteration   6 Fine resid/resid0 = 4.511949138e-11
+MLMG: Iteration   7 Fine resid/resid0 = 4.280359151e-12
+MLMG: Iteration   7 Crse resid/resid0 = 5.441217878e-11
+MLMG: Iteration   8 Fine resid/resid0 = 4.284076332e-13
+MLMG: Iteration   8 Crse resid/resid0 = 7.47852768e-12
+MLMG: Final Iter. 8 resid, resid/resid0 = 1.275596162e-06, 7.47852768e-12
+MLMG: Timers: Solve = 0.511670588 Iter = 0.488892706 Bottom = 0.001983585
+Level 0
+    max-norm: 0.0002525045557
+    1-norm  : 4.672400403e-05
+Level 1
+    max-norm: 0.0002525045557
+    1-norm  : 4.000168638e-06
+Total GPU global memory (MB) spread across MPI: [40440 ... 40440]
+Free  GPU global memory (MB) spread across MPI: [9672 ... 9672]
+[The         Arena] max space (MB) allocated spread across MPI: [30330 ... 30330]
+[The         Arena] max space (MB) used      spread across MPI: [3721 ... 3721]
+[The Managed Arena] max space (MB) allocated spread across MPI: [8 ... 8]
+[The Managed Arena] max space (MB) used      spread across MPI: [0 ... 0]
+[The  Pinned Arena] max space (MB) allocated spread across MPI: [8 ... 8]
+[The  Pinned Arena] max space (MB) used      spread across MPI: [2 ... 2]
+[The   Comms Arena] max space (MB) allocated spread across MPI: [8 ... 8]
+[The   Comms Arena] max space (MB) used      spread across MPI: [0 ... 0]
+AMReX (26.10-24-gea4f69651aa6) finalized
