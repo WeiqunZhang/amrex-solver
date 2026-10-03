@@ -8,7 +8,7 @@ if [[ "${NERSC_HOST:-}" == perlmutter ]]; then
     # e.g. module load PrgEnv-gnu cudatoolkit craype-accel-nvidia80
     MAKEFLAGS_GPU=${MAKEFLAGS_GPU:-"USE_CUDA=TRUE USE_MPI=TRUE COMP=gnu"}
     LAUNCH=${LAUNCH:-"srun -n 1 -c 32 -G 1"}
-elif [[ "$(hostname)" == *frontier* ]]; then
+elif [[ "${LMOD_SYSTEM_NAME:-}" == frontier || "$(hostname -f 2>/dev/null)" == *frontier* ]]; then
     MACHINE=frontier
     # e.g. module load PrgEnv-amd craype-accel-amd-gfx90a rocm
     MAKEFLAGS_GPU=${MAKEFLAGS_GPU:-"USE_HIP=TRUE USE_MPI=TRUE"}

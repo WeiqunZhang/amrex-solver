@@ -25,10 +25,9 @@ ITER = re.compile(r"Iter = ([0-9.eE+-]+)")
 def machine():
     if os.environ.get("NERSC_HOST") == "perlmutter":
         return "perlmutter"
-    host = socket.gethostname()
-    if "frontier" in host:
+    if os.environ.get("LMOD_SYSTEM_NAME") == "frontier" or "frontier" in socket.getfqdn():
         return "frontier"
-    return os.environ.get("MACHINE", host.split(".")[0])
+    return os.environ.get("MACHINE", socket.gethostname().split(".")[0])
 
 
 def cases():
