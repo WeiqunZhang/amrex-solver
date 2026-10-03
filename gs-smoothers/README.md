@@ -56,7 +56,7 @@ share objects. Tests from the AMReX tree are built in place under
 | `nodal-jacobi-mb` | nodal_variants 3D | Jacobi, unaffected reference |
 | `nodal2d-aa`, `nodal2d-rz` | nodal_variants 2D | 2D nodal kernels, Cartesian and RZ |
 | `nodetensor3d` | NodeTensorLap 3D | `MLNodeTensorLaplacian` red-black smoother |
-| `pfs3d` | Tests/Base/ParallelForStrided | launcher correctness, prints `N cases, M failures` |
+| `pfs3d` | Tests/Base/ParallelForStrided | launcher correctness, prints `N cases, M failures`; new in the PR, so skipped for trees without it |
 
 Not covered: `mlpoisson_gsrb_os` (Poisson with overset mask) has no standalone
 test, and the 2D metric kernel `mlpoisson_gsrb_m` needs an RZ cell-centered

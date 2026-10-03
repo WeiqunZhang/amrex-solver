@@ -37,6 +37,10 @@ status=0
 # build_one <name> <dir> <dim>
 build_one () {
     local name=$1 dir=$2 dim=$3
+    if [[ ! -d $dir ]]; then
+        echo "== $name  skipped: $dir does not exist in this tree"
+        return
+    fi
     # Separate object dirs per tag, so two source trees never share objects.
     local mk="make DIM=$dim $MAKEFLAGS_GPU AMREX_HOME=$AMREX TMP_BUILD_DIR=tmp_build_dir_$TAG"
     echo "== $name  ($dir, DIM=$dim)"
