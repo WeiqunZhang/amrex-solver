@@ -33,7 +33,7 @@ MLMG: Iteration  20 Fine resid/resid0 = 2.034195653e-11
 MLMG: Iteration  21 Fine resid/resid0 = 7.668313565e-12
 MLMG: Iteration  21 Crse resid/resid0 = 5.086447265e-13
 MLMG: Final Iter. 21 resid, resid/resid0 = 1.256976816e-05, 7.668313565e-12
-MLMG: Timers: Solve = 0.269291919 Iter = 0.259408107 Bottom = 0.034855265
+MLMG: Timers: Solve = 0.25773401 Iter = 0.247700753 Bottom = 0.034488266
  level 0 max change in overset cells: 0
  level 1 max change in overset cells: 0
  level 0 max-norm error: 0.000253432302 1-norm error: 4.137684192e-05

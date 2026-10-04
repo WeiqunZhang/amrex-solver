@@ -10,17 +10,17 @@ MLMG: Initial rhs               = 236.6921747
 MLMG: Initial residual (resid0) = 170567.8198
 MLMG: Iteration   1 Fine resid/resid0 = 8.111028026e-05
 MLMG: Iteration   2 Fine resid/resid0 = 1.990695875e-06
-MLMG: Iteration   3 Fine resid/resid0 = 1.176773276e-07
-MLMG: Iteration   4 Fine resid/resid0 = 1.470372084e-08
-MLMG: Iteration   5 Fine resid/resid0 = 1.903314714e-09
-MLMG: Iteration   6 Fine resid/resid0 = 2.617788539e-10
-MLMG: Iteration   7 Fine resid/resid0 = 3.624984746e-11
-MLMG: Iteration   8 Fine resid/resid0 = 5.023826218e-12
-MLMG: Iteration   8 Crse resid/resid0 = 4.005655611e-11
-MLMG: Iteration   9 Fine resid/resid0 = 6.955476228e-13
-MLMG: Iteration   9 Crse resid/resid0 = 5.503056157e-12
-MLMG: Final Iter. 9 resid, resid/resid0 = 9.386442912e-07, 5.503056157e-12
-MLMG: Timers: Solve = 1.313960226 Iter = 1.089266281 Bottom = 0.00324174
+MLMG: Iteration   3 Fine resid/resid0 = 1.176773274e-07
+MLMG: Iteration   4 Fine resid/resid0 = 1.470372079e-08
+MLMG: Iteration   5 Fine resid/resid0 = 1.903314608e-09
+MLMG: Iteration   6 Fine resid/resid0 = 2.61778781e-10
+MLMG: Iteration   7 Fine resid/resid0 = 3.624978347e-11
+MLMG: Iteration   8 Fine resid/resid0 = 5.023723075e-12
+MLMG: Iteration   8 Crse resid/resid0 = 4.005665559e-11
+MLMG: Iteration   9 Fine resid/resid0 = 6.956897581e-13
+MLMG: Iteration   9 Crse resid/resid0 = 5.502770053e-12
+MLMG: Final Iter. 9 resid, resid/resid0 = 9.385954911e-07, 5.502770053e-12
+MLMG: Timers: Solve = 1.357398314 Iter = 1.131811622 Bottom = 0.00324914
 Level 0
     max-norm: 0.0002525037846
     1-norm  : 4.672388575e-05

@@ -17,7 +17,7 @@ MLMG: Iteration   5 Crse resid/resid0 = 1.477146812e-10
 MLMG: Iteration   6 Fine resid/resid0 = 4.256146875e-13
 MLMG: Iteration   6 Crse resid/resid0 = 2.816503584e-12
 MLMG: Final Iter. 6 resid, resid/resid0 = 2.625177787e-05, 2.816503584e-12
-MLMG: Timers: Solve = 0.104620317 Iter = 0.092218971 Bottom = 0.002194375
+MLMG: Timers: Solve = 0.104561683 Iter = 0.092140914 Bottom = 0.002182201
 Level 0
     max-norm: 5.239373691e-06
     1-norm  : 8.873240134e-07

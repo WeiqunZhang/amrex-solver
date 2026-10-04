@@ -35,7 +35,7 @@ MLMG: Iteration  21 Fine resid/bnorm = 1.02505647e-10
 MLMG: Iteration  22 Fine resid/bnorm = 9.925933685e-11
 MLMG: Iteration  22 Crse resid/bnorm = 2.256169687e-11
 MLMG: Final Iter. 22 resid, resid/bnorm = 1.224562851e-08, 9.925933685e-11
-MLMG: Timers: Solve = 0.332026953 Iter = 0.292943106 Bottom = 0.019875663
+MLMG: Timers: Solve = 0.357103624 Iter = 0.314725038 Bottom = 0.023083236
 Level 0 max-norm error: 1.151842783e-06 1-norm error: 3.923999632e-07 2-norm error: 5.012762841e-07
 Level 1 max-norm error: 4.432726506e-07 1-norm error: 2.869026858e-08 2-norm error: 8.329382041e-08
 Total GPU global memory (MB) spread across MPI: [65520 ... 65520]
